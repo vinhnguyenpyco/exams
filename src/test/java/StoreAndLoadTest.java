@@ -1,4 +1,4 @@
-import exams.indigo.QuestionOne;
+import exams.myexercise.QuestionOne;
 import org.junit.Test;
 
 import java.util.ArrayList;

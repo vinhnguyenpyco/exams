@@ -1,4 +1,4 @@
-package exams.indigo;
+package exams.myexercise;
 
 public class Constant {
     // Key and Value are separated by '='

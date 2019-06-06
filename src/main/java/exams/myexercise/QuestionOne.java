@@ -1,4 +1,4 @@
-package exams.indigo;
+package exams.myexercise;
 
 import java.util.ArrayList;
 import java.util.HashMap;
