@@ -1,3 +1,5 @@
+package exams.myexercise;
+
 import exams.myexercise.QuestionOne;
 import org.junit.Test;
 
