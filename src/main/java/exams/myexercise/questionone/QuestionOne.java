@@ -1,4 +1,6 @@
-package exams.myexercise;
+package exams.myexercise.questionone;
+
+import exams.myexercise.constant.Constant;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package exams.myexercise;
+package exams.myexercise.constant;
 
 public class Constant {
     // Key and Value are separated by '='
