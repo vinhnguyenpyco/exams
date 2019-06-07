@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class PercentDiscountTest {
 
-    private static final double DELTA = 1e-15;
+    private static final double DELTA = 0.1;
     Bill bill = new Bill();
     List<Product> lstProduct = new ArrayList<>();
     Product productOne = new Product();

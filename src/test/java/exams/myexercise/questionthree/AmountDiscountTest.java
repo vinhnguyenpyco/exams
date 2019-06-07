@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class AmountDiscountTest {
 
-    private static final double DELTA = 1e-15;
+    private static final double DELTA = 0.1;
 
     @Test
     public void testAmountDiscount() {
@@ -40,7 +40,7 @@ public class AmountDiscountTest {
         AmountDiscount amountDiscount = new AmountDiscount();
         double total = amountDiscount.calculateDiscount(bill);
 
-        assertEquals(105.4, total,DELTA);
+        assertEquals(5.0, total,DELTA);
     }
 
     @Test

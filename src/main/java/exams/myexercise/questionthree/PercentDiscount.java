@@ -20,7 +20,7 @@ public class PercentDiscount implements RuleDiscount {
      */
     @Override
     public double calculateDiscount(Bill bill){
-        double total = 0.0;
+        double total = 0;
 
         double percentDiscount = Constant.NON_DISCOUNT;
         List<Product> lstProduct;

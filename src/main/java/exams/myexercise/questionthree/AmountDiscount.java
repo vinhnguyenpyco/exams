@@ -19,18 +19,17 @@ public class AmountDiscount implements RuleDiscount {
      */
     @Override
     public double calculateDiscount(Bill bill){
-        double total = 0.0;
+        double total;
 
         List<Product> lstProduct;
 
         Optional<List<Product>> optLstProduct = Optional.of(bill.getLstProduct());
 
         if(optLstProduct.isPresent()){
-            for(Product product : bill.getLstProduct()){
-                total += product.getPrice();
-            }
+            lstProduct = bill.getLstProduct();
+            total = calculateTotalPrice(lstProduct);
 
-            if (total >= Constant.AMOUNT_FOR_DISCOUNT) total = total - (int) total / Constant.AMOUNT_FOR_DISCOUNT * Constant.DISCOUNT_EVERY_100_USD;
+            if (total >= Constant.AMOUNT_FOR_DISCOUNT) total = (int) total / Constant.AMOUNT_FOR_DISCOUNT * Constant.DISCOUNT_EVERY_100_USD;
 
             bill.setTotal(total);
         }
