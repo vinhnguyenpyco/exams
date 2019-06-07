@@ -1,4 +1,4 @@
-package questionthree;
+package exams.myexercise.questionthree;
 
 import exams.myexercise.model.Bill;
 import exams.myexercise.model.Product;
