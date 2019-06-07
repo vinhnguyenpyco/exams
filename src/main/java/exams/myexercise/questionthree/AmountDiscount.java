@@ -29,7 +29,8 @@ public class AmountDiscount implements RuleDiscount {
             lstProduct = bill.getLstProduct();
             total = calculateTotalPrice(lstProduct);
 
-            if (total >= Constant.AMOUNT_FOR_DISCOUNT) total = (int) total / Constant.AMOUNT_FOR_DISCOUNT * Constant.DISCOUNT_EVERY_100_USD;
+            if (total >= Constant.AMOUNT_FOR_DISCOUNT)
+                total = (int) total / Constant.AMOUNT_FOR_DISCOUNT * Constant.DISCOUNT_EVERY_100_USD;
 
             bill.setTotal(total);
         }

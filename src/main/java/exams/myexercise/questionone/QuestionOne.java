@@ -37,9 +37,8 @@ public class QuestionOne {
                     stResult.append(Constant.SEMICOLON);
                 }
             }
-            if(i < lstMap.size() - 1) {
-                stResult.append(Constant.NEW_ITEM);
-            }
+
+            stResult.append(Constant.NEW_ITEM);
         }
 
         return stResult.toString();
@@ -52,19 +51,38 @@ public class QuestionOne {
      */
     public List<Map<String, String>> loadMap(String textMap) {
         List<Map<String, String>> lstResult = new ArrayList<>();
+        Map<String, String> map = new HashMap<>();
 
-        String[] items = textMap.split(Constant.NEW_ITEM);
+        StringBuilder stBuilder = new StringBuilder();
+        String key = "";
+        String value = "";
 
-        for(String item : items) {
-            String[] lstMap = item.split(Constant.SEMICOLON);
-            Map<String, String> map = new HashMap<>();
+        for(char character : textMap.toCharArray()){
+            switch (character) {
+                case Constant.EQUAL:
+                    key = stBuilder.toString();
 
-            for(String stMap : lstMap) {
-                String[] entryMap = stMap.split(Constant.EQUAL);
-                map.put(entryMap[0], entryMap[1]);
+                    stBuilder = new StringBuilder();
+                    break;
+                case Constant.SEMICOLON:
+                    value = stBuilder.toString();
+
+                    map.put(key, value);
+
+                    stBuilder = new StringBuilder();
+                    break;
+                case Constant.NEW_ITEM:
+                    value = stBuilder.toString();
+
+                    map.put(key, value);
+                    lstResult.add(map);
+
+                    map = new HashMap<>();
+                    stBuilder = new StringBuilder();
+                    break;
+                default:
+                    stBuilder.append(character);
             }
-
-            lstResult.add(map);
         }
 
         return lstResult;

@@ -2,13 +2,13 @@ package exams.myexercise.constant;
 
 public class Constant {
     // Key and Value are separated by '='
-    public static final String EQUAL = "=";
+    public static final char EQUAL = '=';
 
     // Key-Value pairs are separated by ';'
-    public static final String SEMICOLON = ";";
+    public static final char SEMICOLON = ';';
 
     // New map
-    public static final String NEW_ITEM = "\n";
+    public static final char NEW_ITEM = '\n';
 
     // Discount for employee
     public static final double DISCOUNT_EMPLOYEE = 0.3;

@@ -37,12 +37,12 @@ public class StoreAndLoadTest {
         QuestionOne quesOne = new QuestionOne();
         String storeMap = quesOne.storeMap(lstMap);
 
-        assertEquals("key1=value1;key2=value2\nkey3=value3;key4=value4\nkey5=value5;key6=value6", storeMap);
+        assertEquals("key1=value1;key2=value2\nkey3=value3;key4=value4\nkey5=value5;key6=value6\n", storeMap);
     }
 
     @Test
     public void testSuccessLoadMap() {
-        String textMap = "key1=value1;key2=value2\nkey3=value3;key4=value4\nkey5=value5;key6=value6";
+        String textMap = "key1=value1;key2=value2\nkey3=value3;key4=value4\nkey5=value5;key6=value6\n";
 
         QuestionOne quesOne = new QuestionOne();
         List<Map<String, String>> lstMap = quesOne.loadMap(textMap);
