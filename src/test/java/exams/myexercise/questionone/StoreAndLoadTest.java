@@ -1,6 +1,5 @@
 package exams.myexercise.questionone;
 
-import exams.myexercise.questionone.QuestionOne;
 import org.junit.Test;
 
 import java.util.ArrayList;
